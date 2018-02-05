@@ -1,0 +1,37 @@
+﻿Report
+First , User Input from STDIN , is stored in char array.
+For each of these internal commands , we make function call.
+-- For Internal Commands:
+1. - cd 
+CD Command is executed just by using system call chdir(path) , where we pass the directory to path in chdir.
+2. - pwd
+PWD Command is also executed by using system call , getcwd , which return a pointer to your pwd.
+3) - exit
+EXIT Command is also executed by using kill system call , which closes the terminal.
+4) - history
+History Command is executed by writing all commands in history.txt file, which prints the data from history.txt file.
+5) - echo 
+For this command , we stored the input in an array, which is outputted in the format , according to format.
+
+
+For each of these External Commands , we use execvp() system call , where , we pass first argument as path of that executable , in second argument, we pass that char array which we user inputted.
+We use wait() , till child process executes.
+-- For External Commands
+   1. - ls 
+For , this first , we have taken pwd. Then we access this pwd’s struct by using opendir() system call. Then by using d_name parameter of struct, we store these files/sub directories name in an array. Then sort this array.
+
+
+2) - cat
+For this command , we have used fopen() function, which will read the contents of this file and print the result in STDOUT.
+
+
+3) - date
+For this command , I have used the system call localtime() , which gives Current Time. Then I have passed this result in asctime() , which prints the result in ASCII Form.
+
+
+4) - rm
+For this command , I have used system call , remove(path) , in which path is the name of the file which is to be removed.
+
+
+5) - mkdir
+For this command , I have used system call, mkdir(path,mode) in which path is same as name of file and mode is permission which you have to assign to just like chmod one.

@@ -1,0 +1,95 @@
+
+/** Internal Commands **/
+
+1) - cd
+*) ---> works for examples like: 
+cd Desktop
+cd ..
+cd Desktop/2016023/src
+cd         Desktop
+cd              src
+
+*) ---> doesn't work for examples like:
+cd OS Books ( if there is a name of Directory with space in between them. )
+cd ~ ( Not Implemented )
+
+
+2) - pwd
+*) ---> works for any directroy like:
+
+
+3) - date
+*) ---> works for arguments like:
+date (Displays Normal Date)
+date +%d  ( Displays Date )
+date +%H  ( Displays Hour , in 24 Hour Format )
+for other arguments, displays normal 'date'
+
+
+4) - ls
+*) ---> works for arguments like:
+ls
+ls -r ( Displays List in Reverse Format )
+ls -a ( Displays All Format ( including . , .. , .lock ) )
+for other arguments, displays normal 'ls'
+
+
+5) - cat
+*) ---> works for arguments like:
+cat file1.txt file2.txt file3.txt
+cat -n ( Displays Line No. along )
+cat -e ( Appends '$' Symbol at the end of every line )
+
+*) ---> doesn't work for examples like:
+cat 
+cat - file1.txt
+cat file1.txt - file2.txt
+
+
+
+6) - rm
+*) ---> works for arguments like:
+rm file1.txt
+rm -i ( Prompt For Removal Of File , and Removes if first char is 'y' or 'Y' and doesn't remove if first char is 'n' or 'N' )
+rm -v (Print The Message After Removal )
+for rest of arguments , does normal removal
+
+*) ---> doesn't work for examples like:
+rm file1.txt file2.txt file3.txt
+
+
+
+7) - mkdir
+*) ---> works for arguments like:
+mkdir file1
+mkdir -m ( Sets mode permission for making file )
+mkdir -v (Print The Message After Making Directory )
+for rest of arguments , does normal removal
+
+*) ---> doesn't work for examples like:
+mkdir file1 file2 file3
+mkdir -m a=rx file1
+mkdir -m u=rwx file2
+
+
+8) - exit
+*) ---> works for ONLY FOR :
+exit
+
+
+
+9) - history
+*) ---> works ONLY for command:
+history
+
+
+
+10) - echo
+*) ---> works ONLY for command:
+echo "          This is Command      "
+echo this       is      command
+echo " This Is Command "
+
+
+
+
