@@ -1,3 +1,4 @@
+//program for date command in shell
 
 #include <stdio.h>
 #include <string.h>
